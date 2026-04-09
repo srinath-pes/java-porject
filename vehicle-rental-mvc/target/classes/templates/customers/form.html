@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Form</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="container form-card">
+    <h1>Customer Form</h1>
+    <form th:action="@{/customers}" th:object="${customer}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <label>Full Name<input type="text" th:field="*{fullName}"></label>
+        <label>Email<input type="email" th:field="*{email}"></label>
+        <label>Phone<input type="text" th:field="*{phone}"></label>
+        <label>License Number<input type="text" th:field="*{licenseNumber}"></label>
+        <button class="btn" type="submit">Save</button>
+    </form>
+</div>
+</body>
+</html>

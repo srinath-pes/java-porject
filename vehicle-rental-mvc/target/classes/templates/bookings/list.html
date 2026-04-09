@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bookings</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="container">
+    <div class="page-header"><h1>Bookings</h1><a class="btn" th:href="@{/bookings/new}">New Booking</a></div>
+    <table>
+        <thead><tr><th>ID</th><th>Vehicle</th><th>Customer</th><th>Start</th><th>End</th><th>Total</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody>
+        <tr th:each="b : ${bookings}">
+            <td th:text="${b.id}"></td><td th:text="${b.vehicle.registrationNumber}"></td><td th:text="${b.customer.fullName}"></td>
+            <td th:text="${b.startDate}"></td><td th:text="${b.endDate}"></td><td th:text="${b.totalAmount}"></td><td th:text="${b.status}"></td>
+            <td><a th:href="@{'/bookings/delete/' + ${b.id}}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

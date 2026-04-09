@@ -1,0 +1,16 @@
+com\example\vehiclerental\entity\Vehicle.class
+com\example\vehiclerental\repository\BookingRepository.class
+com\example\vehiclerental\entity\Booking.class
+com\example\vehiclerental\repository\CustomerRepository.class
+com\example\vehiclerental\service\VehicleService.class
+com\example\vehiclerental\controller\VehicleController.class
+com\example\vehiclerental\controller\BookingController.class
+com\example\vehiclerental\service\CustomerService.class
+com\example\vehiclerental\entity\Customer.class
+com\example\vehiclerental\controller\HomeController.class
+com\example\vehiclerental\controller\CustomerController.class
+com\example\vehiclerental\entity\BookingStatus.class
+com\example\vehiclerental\repository\VehicleRepository.class
+com\example\vehiclerental\service\BookingService.class
+com\example\vehiclerental\entity\VehicleStatus.class
+com\example\vehiclerental\VehicleRentalApplication.class

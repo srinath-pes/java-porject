@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booking Form</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="container form-card">
+    <h1>Booking Form</h1>
+    <form th:action="@{/bookings}" th:object="${booking}" method="post">
+        <label>Vehicle<select th:field="*{vehicle}"><option th:each="v : ${vehicles}" th:value="${v.id}" th:text="${v.registrationNumber + ' - ' + v.brand + ' ' + v.model}"></option></select></label>
+        <label>Customer<select th:field="*{customer}"><option th:each="c : ${customers}" th:value="${c.id}" th:text="${c.fullName}"></option></select></label>
+        <label>Start Date<input type="date" th:field="*{startDate}"></label>
+        <label>End Date<input type="date" th:field="*{endDate}"></label>
+        <button class="btn" type="submit">Confirm Booking</button>
+    </form>
+</div>
+</body>
+</html>
